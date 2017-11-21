@@ -13,33 +13,35 @@
 </head>
 
 <body>
-	<header class="main-header">
-			<h1 class="main-logo">
-				<img src="img/main-logo.svg" alt="Device Manager" />
+	<header class="col nest m12 main-header">
+			<h1 class="col m2 main-logo">
+				<img src="img/main-logo.svg" alt="Device Manager" class="col m10 nest responsive" />
 			</h1>
+			<div class="col m5">
+				&nbsp
+			</div>
+			<div class="col m4 search">
+				<select name="search-option" class="col m3">
+					<option value="buscar" disabled selected="true">Buscar em:</option>
+					<option value="grupo">Grupo</option>
+					<option value="aparelho">Aparelho</option>
+				</select>
 
-			<div class="search">
-				<form>
-					<select name="search-option">
-						<option value="buscar" disabled selected="true">Buscar em:</option>
-						<option value="grupo">Grupo</option>
-						<option value="aparelho">Aparelho</option>
-					</select>
-
-					<div class="search-field">
-						<img src="img/magnifier.svg" class="responsive-img col m1 search-icon" />
-						<input type="text" name="search-field" placeholder="Buscar grupo ou aparelho"/>
+				<form class="col m9 nest">
+					<div class="col m12 nest search-field">
+						<img src="img/magnifier.svg" class="col m1 responsive search-icon" />
+						<input type="text" name="search-field" placeholder="Buscar grupo ou aparelho" class="col m11" />
 					</div>
 				</form>
 			</div>
 
-			<div class="btn-filter">
-				<span class="btn-filter-text">Filtros</span>
-				<img src="img/btn-filter.svg" class="btn-filter-img" />
+			<div class="col m1 btn-filter">
+				<span class="col m9 btn-filter-text">Filtros</span>
+				<img src="img/btn-filter.svg" class="m3 btn-filter-img" />
 			</div>
 	</header>
 
-	<nav class="filter-dropdown">
+	<nav class="col m12 filter-dropdown">
 		<ul class="buttons">
 			<li>
 				<a href="#">
