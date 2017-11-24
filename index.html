@@ -7,13 +7,14 @@
 	<meta name="author" content="Milton Neto" />
 	<meta name="description" content="Teste de UX de Milton Neto - Pulsus[MDM Soluções]" />
 	<meta name="Resource-type" content="Document" />
+
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </head>
 
 <body>
-	<header class="col nest m12 main-header">
+	<header class="col m12 nest main-header">
 			<h1 class="col m2 main-logo">
 				<img src="img/main-logo.svg" alt="Device Manager" class="col m10 nest responsive" />
 			</h1>
@@ -21,23 +22,27 @@
 				&nbsp
 			</div>
 			<div class="col m4 search">
-				<select name="search-option" class="col m3">
-					<option value="buscar" disabled selected="true">Buscar em:</option>
-					<option value="grupo">Grupo</option>
-					<option value="aparelho">Aparelho</option>
-				</select>
+				<div class="col m3 box">
+					<select name="search-option" id="select" class="search-option">
+						<option value="buscar" disabled selected="true">Buscar em:</option>
+						<option value="grupo">Grupo</option>
+						<option value="aparelho">Aparelho</option>
+					</select>
+				</div>
 
 				<form class="col m9 nest">
 					<div class="col m12 nest search-field">
 						<img src="img/magnifier.svg" class="col m1 responsive search-icon" />
-						<input type="text" name="search-field" placeholder="Buscar grupo ou aparelho" class="col m11" />
+						<input type="text" name="search-field" placeholder="Buscar grupo ou aparelho" class="col m11 search-field-text" />
 					</div>
 				</form>
 			</div>
 
 			<div class="col m1 btn-filter">
-				<span class="col m9 btn-filter-text">Filtros</span>
-				<img src="img/btn-filter.svg" class="m3 btn-filter-img" />
+				<a href="#">
+					<span class="col m9 btn-filter-text">Filtros</span>
+					<img src="img/btn-filter.svg" class="m3 btn-filter-img" />
+				</a>
 			</div>
 	</header>
 
@@ -70,6 +75,15 @@
 	<section class="map">
 		<img src="img/map-1.png">
 	</section>
+	
 </body>
+	
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/modernizr-custom.js"></script>
+	<script type="text/javascript" src="js/selecty.js"></script>
+
+	<script type="text/javascript">
+		$('select').selecty();
+	</script>
 
 </html>
