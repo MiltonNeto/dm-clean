@@ -49,7 +49,7 @@
 	<nav class="col m12 filter-dropdown">
 		<ul class="buttons">
 			<li>
-				<a href="#">
+				<a href="#" id="modalOpen">
 					<span class="link-icon ti-Line-Smartphone-1"></span>
 					<span class="link-text">POR APARELHO</span>
 				</a>
@@ -67,7 +67,12 @@
 				</a>
 			</li>
 			<li class="link-title">
-				PERÍODO DE INATIVIDADE:
+				<span class="slide-text">
+					PERÍODO DE INATIVIDADE:
+				</span>
+				<span id="slide-container">
+				  <input type="range" min="1" max="100" value="50" class="slider" id="rangeSlider">
+				</span>
 			</li>
 		</ul>
 	</nav>
@@ -75,15 +80,71 @@
 	<section class="map">
 		<img src="img/map-1.png">
 	</section>
+
+	<div id="modalCalendar" class="modal">
+
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <span class="close">&times;</span>
+		    <h2>Modal Header</h2>
+		  </div>
+		  <div class="modal-body">
+		    <p>Some text in the Modal Body</p>
+		    <p>Some other text...</p>
+		  </div>
+		  <div class="modal-footer">
+		    <h3>Modal Footer</h3>
+		  </div>
+		</div>
+	</div>
+
+
 	
 </body>
 	
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/modernizr-custom.js"></script>
 	<script type="text/javascript" src="js/selecty.js"></script>
+	<script type="text/javascript" src="js/slider.js"></script>
 
 	<script type="text/javascript">
 		$('select').selecty();
 	</script>
 
+	<script type="text/javascript">
+    	$( ".btn-filter" ).click(function() {
+		  $( ".filter-dropdown" ).slideToggle('fast');
+		});
+    </script>
+
+    <script type="text/javascript">
+    	var slider = document.getElementById("rangeSlider");
+		var output = document.getElementById("demo");
+		output.innerHTML = slider.value; // Display the default slider value
+
+		// Update the current slider value (each time you drag the slider handle)
+		slider.oninput = function() {
+		    output.innerHTML = this.value;
+		}
+    </script>
+
+    <script type="text/javascript">
+    	var modal = document.getElementById('modalCalendar');
+		var btn = document.getElementById("modalOpen");
+		var span = document.getElementsByClassName("close")[0];
+
+		btn.onclick = function() {
+		    modal.style.display = "block";
+		}
+
+		span.onclick = function() {
+		    modal.style.display = "none";
+		}
+
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        modal.style.display = "none";
+		    }
+		}
+    </script>
 </html>
