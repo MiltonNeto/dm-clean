@@ -8,6 +8,7 @@
 	<meta name="description" content="Teste de UX de Milton Neto - Pulsus[MDM Soluções]" />
 	<meta name="Resource-type" content="Document" />
 
+	<link rel="stylesheet" type="text/css" href="css/jquery.tree-multiselect.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
@@ -55,9 +56,9 @@
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="#" id="modalCalendarOpen">
 					<span class="link-icon ti-Line-Calendar-1"></span>
-					<span class="link-text">POR DATA</span>
+					<span class="link-text">POR DATA</span>					
 				</a>
 			</li>
 			<li>
@@ -81,34 +82,224 @@
 		<img src="img/map-1.png">
 	</section>
 
-	<div id="modalCalendar" class="modal">
+	<div id="modalDevices" class="modal">
 
 		<div class="modal-content">
 		  <div class="modal-header">
 		    <span class="close">&times;</span>
-		    <h2>Modal Header</h2>
+		    <h2>Escolha os dispositivos</h2>
 		  </div>
 		  <div class="modal-body">
-		    <p>Some text in the Modal Body</p>
-		    <p>Some other text...</p>
+		   <select id="test-select" multiple="multiple">
+		      <option value="dispositivo-1" data-section="Grupo 1">Dispositivo 1</option>
+		      <option value="dispositivo-1" data-section="Grupo 1">Dispositivo 2</option>
+		      <option value="dispositivo-1" data-section="Grupo 1">Dispositivo 3</option>
+		      <option value="dispositivo-1" data-section="Grupo 1">Dispositivo 4</option>
+		      <option value="dispositivo-1" data-section="Grupo 2">Dispositivo 5</option>
+		      <option value="dispositivo-1" data-section="Grupo 2">Dispositivo 6</option>
+		      <option value="dispositivo-1" data-section="Grupo 2">Dispositivo 7</option>
+		      <option value="dispositivo-1" data-section="Grupo 3">Dispositivo 8</option>
+		      <option value="dispositivo-1" data-section="Grupo 3">Dispositivo 9</option>
+		      <option value="dispositivo-1" data-section="Grupo 3">Dispositivo 10</option>
+		      <option value="dispositivo-1" data-section="Grupo 3">Dispositivo 11</option>
+		      <option value="dispositivo-1" data-section="Grupo 4">Dispositivo 12</option>
+		      <option value="dispositivo-1" data-section="Grupo 4">Dispositivo 13</option>
+		      <option value="dispositivo-1" data-section="Grupo 4">Dispositivo 14</option>
+		      <option value="dispositivo-1" data-section="Grupo 4">Dispositivo 15</option>
+		    </select>
 		  </div>
 		  <div class="modal-footer">
-		    <h3>Modal Footer</h3>
-		  </div>
+		      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+		  </div>		 
 		</div>
 	</div>
 
+	<div id="modalCalendar" class="modal">
+		<div class="modal-content">
+		  <div class="col m12 modal-header">
+		    <span class="close">&times;</span>
+		    <h2>Filtro por data</h2>
+		  </div>
+		  <div class="col m12 modal-body">
+		  	<div class="col m2">
+		  	</div>
+		  	<table class="col m8 calendar">
+		  		<tr>
+
+			  		<th colspan="7">
+			  			<button class="back-pointer">
+			  				<img src="img/left-arrow.svg" />
+			  			</button>
+			  				Novembro
+			  			<button class="next-pointer">
+			  				<img src="img/right-arrow.svg" />
+			  			</button>
+			  		</th>
+		  		</tr>
+		  		<tr>
+		  			<td class="week">
+		  				Dom
+		  			</td>
+		  			<td class="week">
+		  				Seg
+		  			</td>
+		  			<td class="week">
+		  				Ter
+		  			</td class="week">
+		  			<td class="week">
+		  				Qua
+		  			</td class="week">
+		  			<td class="week">
+		  				Qui
+		  			</td>
+		  			<td class="week">
+		  				Sex
+		  			</td>
+		  			<td class="week">
+		  				Sab
+		  			</td>
+		  		</tr>
+
+		  		<tr>
+		  			<td class="inactive">
+		  				29
+		  			</td>
+		  			<td class="inactive">
+		  				30
+		  			</td>
+		  			<td class="inactive">
+		  				31
+		  			</td>
+		  			<td>
+		  				01
+		  			</td>
+		  			<td>
+		  				02
+		  			</td>
+		  			<td>
+		  				03
+		  			</td>
+		  			<td>
+		  				04
+		  			</td>
+		  		</tr>
+
+		  		<tr>
+		  			<td>
+		  				05
+		  			</td>
+		  			<td>
+		  				06
+		  			</td>
+		  			<td>
+		  				07
+		  			</td>
+		  			<td>
+		  				08
+		  			</td>
+		  			<td>
+		  				09
+		  			</td>
+		  			<td>
+		  				10
+		  			</td>
+		  			<td>
+		  				11
+		  			</td>
+		  		</tr>
+
+		  		<tr>
+		  			<td>
+		  				12
+		  			</td>
+		  			<td>
+		  				13
+		  			</td>
+		  			<td>
+		  				14
+		  			</td>
+		  			<td>
+		  				15
+		  			</td>
+		  			<td>
+		  				16
+		  			</td>
+		  			<td>
+		  				17
+		  			</td>
+		  			<td>
+		  				18
+		  			</td>
+		  		</tr>
+
+		  		<tr>
+		  			<td>
+		  				19
+		  			</td>
+		  			<td>
+		  				20
+		  			</td>
+		  			<td>
+		  				21
+		  			</td>
+		  			<td>
+		  				22
+		  			</td>
+		  			<td>
+		  				23
+		  			</td>
+		  			<td>
+		  				24
+		  			</td>
+		  			<td>
+		  				25
+		  			</td>
+		  		</tr>
+
+		  		<tr>
+		  			<td>
+		  				26
+		  			</td>
+		  			<td>
+		  				27
+		  			</td>
+		  			<td>
+		  				28
+		  			</td>
+		  			<td>
+		  				29
+		  			</td>
+		  			<td>
+		  				30
+		  			</td>
+		  			<td class="inactive">
+		  				01
+		  			</td>
+		  			<td class="inactive">
+		  				02
+		  			</td>
+		  		</tr>
+
+		  	</table>
+		  </div>
+		  <div class="col m12 modal-footer">
+		      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+		  </div>		 
+		</div>
+	</div>
 
 	
 </body>
 	
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/modernizr-custom.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/selecty.js"></script>
 	<script type="text/javascript" src="js/slider.js"></script>
-
+	<script type="text/javascript" src="js/jquery.tree-multiselect.js"></script>
+	
 	<script type="text/javascript">
-		$('select').selecty();
+		$('#select').selecty();
 	</script>
 
 	<script type="text/javascript">
@@ -127,10 +318,10 @@
 		    output.innerHTML = this.value;
 		}
     </script>
-
+    <!--
     <script type="text/javascript">
-    	var modal = document.getElementById('modalCalendar');
-		var btn = document.getElementById("modalOpen");
+    	var modal = document.getElementById('modalDevices');
+		var btn = document.getElementById("modalDevicesOpen");
 		var span = document.getElementsByClassName("close")[0];
 
 		btn.onclick = function() {
@@ -147,4 +338,40 @@
 		    }
 		}
     </script>
+	-->
+     <script type="text/javascript">
+    	var modalCalendar = document.getElementById('modalCalendar');
+		var btnCalendar = document.getElementById("modalCalendarOpen");
+		var span = document.getElementsByClassName("close")[0];
+
+		btnCalendar.onclick = function() {
+		    modalCalendar.style.display = "block";
+		}
+
+		span.onclick = function() {
+		    modalCalendar.style.display = "none";
+		}
+
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        modalCalendar.style.display = "none";
+		    }
+		}
+    </script>
+
+    <script type="text/javascript">
+      var tree1 = $("#test-select").treeMultiselect({ enableSelectAll: true, sortable: true });
+      var tree2 = $("#test-select-2").treeMultiselect({
+        searchable: true
+      });
+      var tree3 = $("#test-select-3").treeMultiselect({
+        allowBatchSelection: false,
+        enableSelectAll: true,
+        searchable: true,
+        sortable: true,
+        startCollapsed: true
+      });
+    </script>
+
+    
 </html>

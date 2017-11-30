@@ -469,6 +469,56 @@ img.scale, img.responsive {
     z-index: -9999;
   }
 
+  .calendar{
+    font-size: 16px;
+    color: #9E9E9E;
+    margin-bottom: 20px;
+  }
+
+  .calendar th{
+    padding: 15px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    vertical-align: middle;
+    line-height: 30px;
+  }
+
+  .calendar td{
+    text-align: center;
+    vertical-align: middle;
+    padding: 20px;
+  }
+
+  .calendar .week{
+    font-weight: 900;
+  }
+
+  .calendar .inactive{
+    opacity: 0.4;
+  }
+
+  .back-pointer, .next-pointer{
+    width: 30px;
+    height: 30px;
+    background-color: #78CEEC;
+    border: 0;
+    border-radius: 50%; 
+  }
+
+ .back-pointer{
+    float: left;
+ }
+
+.next-pointer{
+    float: right;
+ }
+
+  .back-pointer img, .next-pointer img{
+    width: 20px;
+    height: 20px;
+  }
+
 } /* Desktop breakpoint*/
 
 
@@ -694,14 +744,13 @@ img.scale, img.responsive {
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 50%; /* Could be more or less, depending on screen size */
 }
 
 
 .close {
-    color: #aaa;
+    color: #FFF;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -709,7 +758,7 @@ img.scale, img.responsive {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: #FFF;
     text-decoration: none;
     cursor: pointer;
 }
@@ -717,40 +766,73 @@ img.scale, img.responsive {
 .modal-header {
     padding: 2px 16px;
     background-color: #5cb85c;
-    color: white;
+    background: #8d7adc; /* Old browsers */
+    background: -moz-linear-gradient(left, #8d7adc 0%, #13c1ef 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #8d7adc 0%,#13c1ef 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #8d7adc 0%,#13c1ef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8d7adc', endColorstr='#13c1ef',GradientType=0 ); /* IE6-9 */
 }
 
+.modal-sidebar{
+    padding: 2px 16px;
+    height: 100%;
+    top: 0 ;
+    left: 0;
+    bottom: 0;
+    right:0;
+    background-color: #5cb85c;
+    background: #8d7adc; /* Old browsers */
+    background: -moz-linear-gradient(left, #8d7adc 0%, #13c1ef 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #8d7adc 0%,#13c1ef 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #8d7adc 0%,#13c1ef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8d7adc', endColorstr='#13c1ef',GradientType=0 ); /* IE6-9 */
+}
 
-.modal-body {padding: 2px 16px;}
+.modal-header h2{
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    padding: 15px 0px;
+}
+
+.modal .tree-multiselect .title {
+    background-color: #efefef;
+    color: #9e9e9e;
+    font-size: 16px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    border-radius: 50px;
+    padding: 5px 25px;
+    font-weight: 700px;
+}
+
+.modal-body {
+    padding: 2px 16px;
+    background-color: #FFF;
+}
 
 
 .modal-footer {
-    padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
+    text-align: right;
+    padding: 15px 16px;
+    background-color: #FFF;    
+}
+
+.modal-action{
+    font-weight: bold;
+    font-size: 18px;
+    color: #009AF8;
+    text-decoration: none;
+    padding: 15px;
 }
 
 
-/*.modal-content {
-    position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0;
-    border: 1px solid #888;
-    width: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s
-}
-*/
-/* Add Animation */
 @-webkit-keyframes animatetop {
     from {top: -300px; opacity: 0} 
-    to {top: 50%; opacity: 1}
+    to {top: 20%; opacity: 1}
 }
 
 @keyframes animatetop {
     from {top: -300px; opacity: 0}
-    to {top: 
+    to {top: 20%; opacity: 1}
